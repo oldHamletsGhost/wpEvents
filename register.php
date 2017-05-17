@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Viewson's Events Plugin
-Description: Custom plugin built to handle the events for Viewson.ca.
+Description: Custom plugin built to handle the events for newSite.viewson.ca.
 Author: Greg Goldsberry
 Version: 1.0
 */
@@ -12,9 +12,6 @@ if (!defined('ABSPATH')) {
 
 class voEvents
 {
-
-    const PLUGIN_FOLDER = 'viewson-events';
-
     /************************
      * voEvents constructor.
      ************************/
@@ -53,8 +50,7 @@ class voEvents
                 'show_in_nav_menus' => true,
                 'supports' => array('title', 'editor', 'thumbnail', 'page-attributes'),
                 'menu_icon' => 'dashicons-calendar-alt',
-                'publicly_queryable' => true,
-//                'taxonomies' => array("category")
+                'publicly_queryable' => true
 
             )
         );
