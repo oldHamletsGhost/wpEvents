@@ -1,0 +1,148 @@
+.flex-container(@flow: row; @wrap: nowrap) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: @flow @wrap;
+  flex-flow: @flow @wrap;
+}
+
+.align-items(@param) {
+  -webkit-align-items: @param;
+  align-items: @param;
+}
+
+.align-self(@param) {
+  -webkit-align-self: @param;
+  align-self: @param;
+}
+
+.justify-content(@param) {
+  -webkit-justify-content: @param;
+  justify-content: @param;
+}
+
+.flex(...) {
+  -webkit-box-flex: @arguments;
+  -moz-box-flex: @arguments;
+  -webkit-flex: @arguments;
+  -ms-flex: @arguments;
+  flex: @arguments;
+}
+
+.trans(...) {
+  -webkit-transition: @arguments;
+  -moz-transition: @arguments;
+  -ms-transition: @arguments;
+  -o-transition: @arguments;
+  transition: @arguments;
+}
+
+//google api settings
+form#google_api{
+  input#google_api_key {
+    width: 40%;
+    margin-bottom: 15px;
+  }
+}
+
+//twitter settings
+form#twitter_settings{
+  input#twitter_handle{
+    width: 40%;
+    margin-bottom: 15px;
+  }
+}
+
+//social media settings
+#social-media-form {
+  .social-media-fields {
+    margin-bottom: 10px;
+    .form-section {
+      .align-items(center);
+      .flex-container(row, nowrap);
+      label {
+        width: 5%;
+      }
+      input {
+        width: 30%;
+      }
+    }
+  }
+}
+
+.events-data {
+  .form-table {
+    .row {
+      .align-items(center);
+      .flex-container(row, nowrap);
+      .justify-content(space-between);
+      margin: 10px 0;
+      .form-container {
+        .align-items(center);
+        .flex-container(row, nowrap);
+        .flex(1 1 auto);
+        &.button-container{
+          .align-items(center);
+          .justify-content(center);
+          border-bottom: 1px solid #f1f1f1;
+          border-top: 1px solid #f1f1f1;
+          padding: 8px;
+          button#calc-coords{
+            .trans(all, 0.3s);
+            background-color: #00b9eb;
+            border: 2px solid darken(#00b9eb, 5);
+            color: whitesmoke;
+            cursor: pointer;
+            font-weight:bold;
+            &:hover{
+              background-color: whitesmoke;
+              color: #00b9eb;
+            }
+          }
+        }
+        input{
+          width: 60%;
+        }
+        label{
+          cursor: default;
+          display: block;
+          padding: 0 3px;
+          width: 125px;
+        }
+      }
+
+      &.last{
+        .form-container{
+          .flex(0.5 0.5 auto);
+        }
+      }
+    }
+  }
+}
+
+/***************************
+ *  REPSONSIVE
+ ***************************/
+@media screen and (max-width: 1200px) {
+  .events-data {
+    .form-table {
+      .row {
+        .align-items(flex-start);
+        .flex-container(column, nowrap);
+         margin: 0;
+        .form-container{
+          width:100%;
+          margin-bottom: 10px;
+          input{
+            width:100%;
+            max-width: 100%;
+          }
+          label{
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}

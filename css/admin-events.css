@@ -1,0 +1,123 @@
+form#google_api input#google_api_key {
+  width: 40%;
+  margin-bottom: 15px;
+}
+form#twitter_settings input#twitter_handle {
+  width: 40%;
+  margin-bottom: 15px;
+}
+#social-media-form .social-media-fields {
+  margin-bottom: 10px;
+}
+#social-media-form .social-media-fields .form-section {
+  -webkit-align-items: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+}
+#social-media-form .social-media-fields .form-section label {
+  width: 5%;
+}
+#social-media-form .social-media-fields .form-section input {
+  width: 30%;
+}
+.events-data .form-table .row {
+  -webkit-align-items: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.events-data .form-table .row .form-container {
+  -webkit-align-items: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-flex: 1 1 auto;
+  -moz-box-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+.events-data .form-table .row .form-container.button-container {
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-bottom: 1px solid #f1f1f1;
+  border-top: 1px solid #f1f1f1;
+  padding: 8px;
+}
+.events-data .form-table .row .form-container.button-container button#calc-coords {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: #00b9eb;
+  border: 2px solid #00a5d2;
+  color: whitesmoke;
+  cursor: pointer;
+  font-weight: bold;
+}
+.events-data .form-table .row .form-container.button-container button#calc-coords:hover {
+  background-color: whitesmoke;
+  color: #00b9eb;
+}
+.events-data .form-table .row .form-container input {
+  width: 60%;
+}
+.events-data .form-table .row .form-container label {
+  cursor: default;
+  display: block;
+  padding: 0 3px;
+  width: 125px;
+}
+.events-data .form-table .row.last .form-container {
+  -webkit-box-flex: 0.5 0.5 auto;
+  -moz-box-flex: 0.5 0.5 auto;
+  -webkit-flex: 0.5 0.5 auto;
+  -ms-flex: 0.5 0.5 auto;
+  flex: 0.5 0.5 auto;
+}
+/***************************
+ *  REPSONSIVE
+ ***************************/
+@media screen and (max-width: 1200px) {
+  .events-data .form-table .row {
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    margin: 0;
+  }
+  .events-data .form-table .row .form-container {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .events-data .form-table .row .form-container input {
+    width: 100%;
+    max-width: 100%;
+  }
+  .events-data .form-table .row .form-container label {
+    padding: 0;
+  }
+}
